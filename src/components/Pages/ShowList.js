@@ -56,6 +56,7 @@ const ShowList = () => {
             try {
                 await deleteCourse(id); 
                 loadData();
+                setFormData({ ...formData, id: '' });
                 alert("삭제되었습니다.");
             } catch (error) {
                 alert("삭제 실패!");
