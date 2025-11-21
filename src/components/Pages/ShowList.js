@@ -54,7 +54,7 @@ const ShowList = () => {
 
         if(window.confirm(`정말 ${targetId}번 과목을 삭제하시겠습니까?`)) {
             try {
-                await deleteCourse(id); 
+                await deleteCourse(targetId); 
                 loadData();
                 setFormData({ ...formData, id: '' });
                 alert("삭제되었습니다.");
