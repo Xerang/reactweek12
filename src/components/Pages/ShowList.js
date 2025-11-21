@@ -47,12 +47,12 @@ const ShowList = () => {
         }
     };
 
-    const handleDelete = async (id) => {
+    const handleDelete = async () => {
         const targetId = formData.id;
         
         if (!targetId) return alert("삭제할 ID를 입력하세요.");
 
-        if(window.confirm(`정말 ${targetId}번 과목을삭제하시겠습니까?`)) {
+        if(window.confirm(`정말 ${targetId}번 과목을 삭제하시겠습니까?`)) {
             try {
                 await deleteCourse(id); 
                 loadData();
